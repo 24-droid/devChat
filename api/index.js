@@ -34,8 +34,6 @@ app.post('/register',async(req,res)=>{
             username:username,
             password:hashedPassword,
         })
-        .then(()=>{console.log("User created")})
-        .catch((err)=>{console.error("User already exists")});
 
         // In the jwt sign we are passing an empty object this used to contains the expiresIn property but we don't want to use it hence i am passing an empty object
         //Also in res.cookie() we are using secure:true it helps set the cookie on https request and is considered as best security practice.
